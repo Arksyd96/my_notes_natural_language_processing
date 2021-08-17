@@ -2,6 +2,7 @@
 
 - Text preprocessing : process of cleaning the text data and make it ready to feed data to the model.
 - Library to use : NLTK (Natural language toolkit).
+- Corpus : It a collection of all the documents present in our dataset.  
 
 ### Text preprocessing techniques
 - Dealing missing values : check null values in the dataset.
@@ -29,9 +30,11 @@
 - Vectorization (**Important**) : the process that follows the tokenization and deletion of stop-words is the vectorization. Vectorization is the transformation of the data from text into numbers (floats). There are many techniques and ways of vectorizing tokens :
   * Count vectorizer : transforms tokens into an array of theur occurences in a given sequence.  
     ``This document is the second document. + ['and', 'document', 'first', 'is', 'one', 'second', 'the', 'third', 'this'] => [0 2 0 1 0 1 1 0 1]``
+  * One-hot encoding : ... does not convey enought information of the context.
   * N-grams : n-grams method combines sequences of n words to create new tokens. Each combination will be represented with the rest of the tokens as indexes.  
-    ``if n=2, i.e bigram, then the columns would be — [“I love”, “love this”, ‘this article”]
-      if n=3, i.e trigram, then the columns would be — [“I love this”, ”love this article”]``
+    ``if n=2, i.e bigram, then the columns would be — [“I love”, “love this”, ‘this article”]``  
+    ``if n=3, i.e trigram, then the columns would be — [“I love this”, ”love this article”]``
+  * + other advanced techniques like 'skip-through', 'Term Frequency-Inverse Document Frequency', 'Google Word2Vec', 'Cosine similarity'...etc.
 
 
 
